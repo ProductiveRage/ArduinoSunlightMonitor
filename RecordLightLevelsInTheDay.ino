@@ -18,6 +18,9 @@ void setup() {
     rtcWasAlreadyConfigured = true;
   }
   else {
+    // Note: I set my computer's time zone to UTC before running this for the first time so that
+    // the time values would always be UTC and I could leave worrying about time zones for a
+    // post-processing phase
     rtc.adjust(DateTime(__DATE__, __TIME__));
     rtcWasAlreadyConfigured = false;
   }
